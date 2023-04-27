@@ -1,0 +1,36 @@
+<head>
+    <title>Text Sanity Check Demo</title>
+    <center><h1>Social Media Comment Classification</h1></center>
+
+    <form action="{{ url_for('main') }}" method="POST" align="center">
+        <fieldset>
+                
+            <legend>
+                <b>Enter the text below to have a sanity check before posting online</b>				
+            </legend>
+            
+            <br><br>
+                    
+            Text Field
+            <br><br>
+                    
+            <input id="text_field" name="comment" type="text" required> 
+                    
+            <center>
+                <input id="submit_button" type="Submit" class="push_button blue">
+            </center>
+                    
+        </fieldset>
+    </form>
+    <div class="result" align="center">
+        {% if result %}
+            {% for key, value in original_input.items() %}
+                <b>{{ key }}</b> : {{ value }}
+            {% endfor %}
+            <br>
+            <br> 
+            <p style="font-size:20px"><b>NLP Model says: </b></p>
+            <p style="font-size:20px">{{ result }}</p>
+        {% endif %}
+    </div>
+</head>
