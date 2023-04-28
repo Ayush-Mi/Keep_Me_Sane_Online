@@ -9,8 +9,6 @@ import tensorflow_text as tf_text
 import os
 
 
-#https://github.com/susanli2016/SMS-Message-Spam-Detector
-
 def recall_m(y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
