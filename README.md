@@ -44,13 +44,14 @@ With the above training method following results were observed
 
 To replicate this application the system must be running python >3.* . Clone this repository and download the dataset from [kaggle](https://www.kaggle.com/datasets/julian3833/jigsaw-toxic-comment-classification-challenge) and place it in folder ./data . Run the *train.ipynb* notebook which downloads the Bert Base uncased model and trains the neural network for text classification. To run the demo shown in the above video run `python app.py` from the present directory and go to url http://127.0.0.1:5000 on your local browser.
 
+## Future works
+
+This is just the part one of the project *Keep Me Sane Online* where we are only classifying the text. The part two would consist of a language generation model that takes in these inappropriate sentences and transforms them into more polite version of themselves.
+
+It would be really challenging to transform some of the harsh language that we see online today but would also be worth exploring.
+
 ## References
 
 - Dataset used was taken from [kaggle](https://www.kaggle.com/datasets/julian3833/jigsaw-toxic-comment-classification-challenge)
 - BERT Base Uncased from [tensorflow hub](https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/4)
 - HTML code was taken from this Damian Boah's [blog](https://medium.datadriveninvestor.com/train-and-deploy-an-nlp-news-classifier-web-app-to-the-cloud-for-free-82655b6b32f4)
-
-
-
-
-
